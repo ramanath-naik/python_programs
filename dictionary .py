@@ -46,5 +46,30 @@ print(dict)
 #clear() method empties the dictionary
 dict.clear()
 
+#looping dictionary
+#print all the key names in the dictionary, one by one
+dict2={"brand":"ford",
+      "model":"mustang",
+      "year":1999
+      }
+for i in dict2:
+    print(i)
+
+#print all the values in the dictionary
+for i in dict2:
+    print(dict2[i])
+
+#using values method
+for i in dict2.values():
+    print(i)
+
+#Loop through both keys and values, by using the items() method:
+for i,j in dict2.items():
+    print(i,j)
+
+
+
+
+
 
 
