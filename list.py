@@ -49,4 +49,44 @@ number[2]=22
 print(number)
 
 #Remove item from the list
-num=[1,2,3,]
+num=[1,2,3,4]
+#removing specified item
+num.remove(1)
+print(num)
+#remove specified index
+num.pop(2)
+print(num)
+#del num[3]
+
+#delete the list completely
+del num
+#print(num)
+
+#clear the list
+#num.clear() #the list remains but elements are removed
+
+#loop through a list
+thislist=["apple","banana","orange"]
+print("list items are")
+for i in thislist:
+    print(i)
+#join two lists
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3)
+
+#sort list
+n=[23,450,33,567,555]
+n.sort()
+
+#copy list
+m=["apple","banana","cherry"]
+l=m.copy()
+print(l)
+
+
+
+
+
+
