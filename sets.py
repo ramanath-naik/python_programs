@@ -47,3 +47,5 @@ print(s1)
 s1.clear()
 print(s1)
 #del s1 # to delete whole set
+
+

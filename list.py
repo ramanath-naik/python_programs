@@ -100,3 +100,6 @@ print(names)
 
 mil= [nums, names]
 print(mil)
+
+del nums[2:]
+print(nums)
