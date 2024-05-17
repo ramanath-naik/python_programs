@@ -85,6 +85,8 @@ m=["apple","banana","cherry"]
 l=m.copy()
 print(l)
 
+l.clear()
+print(l)
 
 
 
