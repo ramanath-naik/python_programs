@@ -67,3 +67,14 @@ def sum(*b):
 
 sum(5,6,34,78)
 
+#variable length argument
+#multiple data with keyword using '**'
+def pers(name, **data):
+    print(name)
+    print(data)
+    #for loop to print key and value pair
+    for i, j in data.items():  #where items is inbuilt function
+        print(i,j)
+
+pers('navin', age= 28, city = 'mumbai', mob= 9778577837)
+
