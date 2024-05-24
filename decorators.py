@@ -26,3 +26,22 @@ final_value = add_one_decorator(example_function)
 print("final value",final_value())
 
 
+
+# def div(a,b):
+#     return a/b
+
+# div(2,4)
+
+def div(a, b):
+    print(a / b)
+
+def smart_div(func):
+    def inner(a, b):
+        if a < b:
+            a, b = b, a
+        return func(a, b)
+    return inner
+
+div = smart_div(div) #decorator
+
+div(2, 4) 
