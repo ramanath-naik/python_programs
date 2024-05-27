@@ -1,3 +1,5 @@
+#Types of methods
+
 class Student:
 
     school = 'Telusko'
