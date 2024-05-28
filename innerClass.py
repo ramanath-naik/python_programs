@@ -34,25 +34,34 @@ s1.show()
 # print(id(lap2))
 
 
-class OuterClass:
-    class InnerClass:
-        def __init__(self, name):
+class University:
+    def __init__(self, name):
+        self.name = name
+        self.students = []
+
+    def add_student(self, name, age):
+        student = self.Student(name, age)  # Creating an instance of the inner class
+        self.students.append(student)
+
+    class Student:
+        def __init__(self, name, age):
             self.name = name
-        
-        def display(self):
-            print(f"Hello, {self.name}!")
+            self.age = age
 
-    def __init__(self, inner_name):
-        self.inner_instance = self.InnerClass(inner_name)
+        def display_info(self):
+            print(f"Name: {self.name}, Age: {self.age}")
+            # print("Name: {}, Age: {}".format(self.name, self.age))#another way of printing using placeholder with format
 
-    def show_inner(self):
-        self.inner_instance.display()
 
-# Creating an instance of OuterClass
-outer = OuterClass("Nested")
-# Accessing the method of the inner class through the outer class
-outer.show_inner()
+# Creating an instance of the University class
+university = University("ABC University")
 
-# Directly creating an instance of InnerClass
-inner = OuterClass.InnerClass("Direct Access")
-inner.display()
+# Adding students to the university
+university.add_student("Alice", 20)
+university.add_student("Bob", 22)
+university.add_student("Charlie", 21)
+
+# Displaying information about each student
+for student in university.students:
+    student.display_info()
+
