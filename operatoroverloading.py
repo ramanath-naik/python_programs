@@ -17,9 +17,6 @@ class Student:
         else:
             return False
 
-    def __str__(self):
-        return '{} {}'.format(self.m1, self.m2)
-
 s1 = Student(58, 69)
 s2 = Student(69, 65)
 
@@ -30,10 +27,24 @@ if s1 > s2:
 else:
     print("s2 wins") 
 
-a = 9
-print(a.__str__()) 
-
 print(s2) 
 
 print(s3.m1)
 print(s3.m1,s3.m2)
+
+
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    def __add__(self, other):
+        # Custom addition behavior
+        return f"{self.value} plus {other.value}"
+
+# Create instances
+obj1 = MyClass(3)
+obj2 = MyClass(4)
+
+# Using the overloaded + operator
+result = obj1 + obj2
+print(result)  # Output: 3 plus 4
