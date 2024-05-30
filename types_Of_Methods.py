@@ -29,9 +29,10 @@ class Student:
 s1 = Student(34,47,32)
 s2 = Student(89,32,12)
 
-
+print(s1.getSchool())
 
 print(s1.avg())
-print(Student.getSchool())
+# print(Student.getSchool())
+
 
 Student.info()
